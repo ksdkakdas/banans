@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fbf1ed">
+<title>Для тебя, мой пупс ♡</title>
+<style>
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #fbf1ed;
+  color: #70484d;
+  font-family: Georgia, "Times New Roman", serif;
+}
+main {
+  max-width: 650px;
+  margin: auto;
+  padding: 28px 22px 50px;
+  text-align: center;
+}
+.eyebrow {
+  font: 10px Arial, sans-serif;
+  letter-spacing: 3px;
+  color: #b17b82;
+  line-height: 2;
+}
+.hero {
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 35px 0;
+}
+h1 {
+  font-size: clamp(43px, 10vw, 65px);
+  line-height: 1.1;
+  font-weight: normal;
+  margin: 22px 0;
+}
+h2 {
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 1.25;
+}
+p { line-height: 1.95; }
+.soft { color: #9a7377; }
+.heart {
+  color: #bd7d87;
+  font-size: 28px;
+  margin: 15px;
+}
+button {
+  border: 0;
+  border-radius: 40px;
+  padding: 16px 24px;
+  background: #a96975;
+  color: white;
+  font: 14px Georgia, serif;
+  cursor: pointer;
+  margin: 20px 0;
+}
+button:focus-visible { outline: 2px solid #70484d; }
+section { padding: 38px 0; }
+.hidden { display: none; }
+.photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 30px 0;
+}
+.polaroid {
+  background: #fffdfb;
+  padding: 9px 9px 17px;
+  box-shadow: 0 7px 25px #70484d12;
+  transform: rotate(-2deg);
+}
+.polaroid:nth-child(even) { transform: rotate(2deg); }
+.polaroid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  background: #f0dfda;
+}
+.caption {
+  font-size: 12px;
+  margin-top: 13px;
+}
+.letter {
+  text-align: left;
+  background: #fffaf7;
+  border: 1px solid #eedbd5;
+  padding: 25px 22px;
+  line-height: 1.95;
+  box-shadow: 0 10px 30px #70484d08;
+}
+.signature {
+  text-align: right;
+  color: #a96975;
+  font-style: italic;
+  font-size: 19px;
+}
+.closing {
+  padding: 45px 0 15px;
+  font-size: 22px;
+  line-height: 1.7;
+}
+footer {
+  padding-top: 35px;
+  color: #b17b82;
+  font-size: 12px;
+}
+.fade { animation: fade .9s ease both; }
+@keyframes fade {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation: none !important;
+  }
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="hero">
+    <div class="eyebrow">С ДНЁМ РОЖДЕНИЯ, МОЯ ЛЮБОВЬ</div>
+    <div class="heart">♡</div>
+    <h1>Для тебя,<br>мой пупс</h1>
+    <p class="soft">
+      Сегодня хочется подарить тебе<br>
+      нечто большее, чем просто слова…
+    </p>
+    <button onclick="openGift()">
+      Здесь кое-что от моего сердца ♡
+    </button>
+    <div class="soft" style="font-size:12px">
+      Сделано с любовью. Только для тебя.
+    </div>
+  </div>
+
+  <div id="gift" class="hidden fade">
+    <section>
+      <div class="eyebrow">НЕСКОЛЬКО МОМЕНТОВ НАШЕЙ ИСТОРИИ</div>
+      <h2>То, что хочется<br>сохранить навсегда</h2>
+      <p class="soft">
+        У каждого снимка есть своя история.<br>
+        А у каждого воспоминания — место в моём сердце.
+      </p>
+
+      <div class="photos">
+        <div class="polaroid">
+          <img src="photo1.jpg" alt="Наше любимое воспоминание">
+          <div class="caption">Момент, который дорог мне ♡</div>
+        </div>
+        <div class="polaroid">
+          <img src="photo2.jpg" alt="Ещё одно наше воспоминание">
+          <div class="caption">Ты и моя улыбка</div>
+        </div>
+        <div class="polaroid">
+          <img src="photo3.jpg" alt="Ещё одно наше фото">
+          <div class="caption">Маленькое счастье</div>
+        </div>
+        <div class="polaroid">
+          <img src="photo4.jpg" alt="Ещё один особенный момент">
+          <div class="caption">И это только начало ♡</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="heart">୨ৎ</div>
+      <div class="eyebrow">МОЁ ПИСЬМО ТЕБЕ</div>
+      <h2>Прочитай<br>это сердцем</h2>
+
+      <div class="letter">
+        Мой любимый пупс, ♡
+
+        <p>
+          С днём рождения, моё родное счастье.
+          Сегодня особенный день, потому что
+          именно в этот день появился на свет
+          человек, который стал для меня
+          по-настоящему дорогим.
+        </p>
+
+        <p>
+          Иногда мне сложно подобрать слова,
+          чтобы объяснить, насколько много ты
+          для меня значишь. Ведь настоящие
+          чувства не всегда помещаются в
+          красивые предложения. Иногда они
+          живут в маленьких моментах, в мыслях
+          о тебе, в улыбке, которая появляется
+          сама собой, когда я тебя вспоминаю.
+        </p>
+
+        <p>
+          Я хочу, чтобы ты знал: для меня ты
+          не просто любимый человек. Ты тот,
+          кому хочется рассказывать о своём
+          дне, делиться мыслями, дарить нежность
+          и желать самого большого счастья.
+          Мне хочется, чтобы рядом со мной ты
+          мог быть собой — без притворства,
+          без необходимости казаться сильнее,
+          чем ты есть. Чтобы ты чувствовал,
+          что тебя ценят, слышат и любят.
+        </p>
+
+        <p>
+          В твой день рождения я желаю тебе
+          не только исполнения желаний и больших
+          побед. Я желаю тебе спокойствия
+          в душе, уверенности в себе, людей,
+          которые искренне поддерживают тебя,
+          и множества причин гордиться собой.
+          Пусть в твоей жизни будет больше
+          светлых дней, чем поводов грустить.
+          И пусть даже в трудные моменты ты
+          помнишь, какой ты замечательный человек.
+        </p>
+
+        <p>
+          Я не могу обещать, что каждый день
+          будет идеальным. Но я хочу беречь то,
+          что между нами есть, замечать маленькие
+          радости, создавать с тобой воспоминания
+          и снова и снова находить причины
+          улыбаться рядом с тобой
+        </p>
+
+        <p>
+          Спасибо тебе за то, что ты есть.
+          За то, что ты — именно ты. За место,
+          которое ты занял в моём сердце.
+          Если бы я могла подарить тебе что-то
+          невидимое, я бы подарила возможность
+          увидеть себя моими глазами хотя бы
+          на одну минуту. Тогда ты бы понял,
+          почему ты для меня так дорог.
+        </p>
+
+        <p>
+          С днём рождения, мой пупсик.
+          Пусть этот новый год твоей жизни
+          принесёт тебе много поводов быть
+          счастливым. И пусть ты никогда
+          не сомневаешься в том, что заслуживаешь
+          всего самого доброго и прекрасного.
+        </p>
+
+        <p>
+          Я очень тебя люблю. Больше, чем
+          иногда умею выразить словами. ♡
+        </p>
+
+        <div class="signature">
+          Крепко-крепко обнимаю.<br>
+          Твоя девочка ♡
+        </div>
+      </div>
+    </section>
+
+    <div class="closing">
+      И если ты забудешь всё,<br>
+      что прочитал здесь,<br>
+      пожалуйста, помни одно:
+      <div class="heart">ты очень любим ♡</div>
+    </div>
+  </div>
+
+  <footer>
+    Эта маленькая страничка создана<br>
+    с огромной любовью — для тебя ♡
+  </footer>
+</main>
+
+<script>
+function openGift() {
+  const gift = document.getElementById("gift");
+  gift.classList.remove("hidden");
+  document.querySelector("button").textContent = "Моё письмо открыто ♡";
+  gift.scrollIntoView({ behavior: "smooth" });
+}
+</script>
+</body>
+</html>
